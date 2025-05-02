@@ -7,7 +7,7 @@ add_requires("gtest", "benchmark")
 add_rules("mode.debug", "mode.release")
 
 -- 目标：主程序
-target("my_project")
+target("acm_icpc")
     set_kind("binary")
     add_files("src/main.cpp")
     
@@ -17,11 +17,11 @@ target("my_project")
 -- 目标：测试
 target("test_suite")
     set_kind("binary")
-    add_files("src/test_suite.cpp")
+    add_files("test/test_suite.cpp")
     add_packages("gtest")
 
 -- 目标：基准测试
 target("benchmark_suite")
     set_kind("binary")
-    add_files("src/benchmark_suite.cpp")
+    add_files("benchmark/benchmark_suite.cpp")
     add_packages("benchmark")
