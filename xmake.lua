@@ -10,6 +10,7 @@ add_rules("mode.debug", "mode.release")
 target("acm_icpc")
     set_kind("binary")
     add_files("src/main.cpp")
+    add_includedirs("base")
     
     -- 只在 target() 内部使用 add_packages
     add_packages("gtest", "benchmark")
